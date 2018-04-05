@@ -10,14 +10,16 @@ inline="-inline=false"
 asserts="-asserts=false"
 
 function ParseUccCommandLine {
+    echo $#
     while [[ $# > 0 ]] ; do
+        echo $1
         case $1 in
             -clear=*)     clear=$1 ;        shift 1 ;;
-            -prep=*)      preprocess=$1 ;   shift 1 ;;
+            -prep**)      preprocess=$1 ;   shift 1 ;;
             -x0=*)        x0=$1 ;           shift 1 ;;
-            -eq=*)        tag_equality=$1 ; shift 1 ;;
-            -diffp=*)     diff_points=$1 ;  shift 1 ;;
-            -ret=*)       ret_guard=$1 ;    shift 1 ;;
+            -tag_eq*)        tag_equality=$1 ; shift 1 ;;
+            -diff*)     diff_points=$1 ;  shift 1 ;;
+            -ret*)       ret_guard=$1 ;    shift 1 ;;
             -inline=*)    inline=$1 ;       shift 1 ;;
             -asserts=*)   asserts=$1 ;       shift 1 ;;
             *)                              shift 1 ;;

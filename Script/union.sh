@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Usage: union.sh filename patched_filename [-clear|prep|x0|eq|diffp|ret|inline|asserts=true|false]"
+echo "Usage: union.sh filename patched_filename [-clear|preprocess|x0|tag_equality|diff_points|ret_guard|inline|asserts=true|false]"
 if [[ $# < 2 ]]
     then
         echo "Not enough args, exiting"
