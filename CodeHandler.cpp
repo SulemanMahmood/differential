@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "CodeHandler.h"
 #include <clang/AST/ASTConsumer.h>
 #include <llvm/Support/Host.h>
@@ -34,6 +35,7 @@ CodeHandler::CodeHandler(string filename)  :
     				text_diag_printer_(new TextDiagnosticPrinter(llvm::errs(), diagnostic_options_)),
     				contex_ptr(0)
 {
+	cerr << "########### FileName is " << filename << " \n";
 	const FileEntry *file_entry_ptr = file_manager_.getFile(filename);
 	if ( !file_entry_ptr ) {
 		cerr << "Failed to open \'" << filename << "\'" << endl;

@@ -13,6 +13,8 @@ namespace differential {
 
       void Transform(ASTConsumer  &consumer);
       string OutputUnion(string FileStr, string FilePatchedStr, unsigned &diff_point_ctr, unsigned &added_ctr, unsigned &deleted_ctr, bool clear);
+      vector<string> identicalFunctions;
+      vector<string> variablesInFunctions;
 
    public:
 

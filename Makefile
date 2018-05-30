@@ -3,7 +3,7 @@ LLVM = ../llvm
 CLANG = $(LLVM)/tools/clang
 APRON = ../apron
 CXX = g++
-CXXFLAGS = -g -c -fPIC -Wno-long-long -fno-rtti #-ansi -Wall -pedantic
+CXXFLAGS = -g -O0 -c -fPIC -Wno-long-long -fno-rtti #-ansi -Wall -pedantic
 DEFS =  -D__STDC_LIMIT_MACROS=0 -D__STDC_CONSTANT_MACROS=0
 INCLUDES = -I/usr/include -I/usr/local/include #-I$(LLVM)/include -I$(CLANG)/include -I$(APRON)/include
 VPATH = Config/ Analysis/ Transform/
